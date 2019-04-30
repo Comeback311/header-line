@@ -131,7 +131,7 @@
 				clearTimeout(this._timer);
 				this._timer = setTimeout(() => {
 					_this._headerLine.style.willChange = '';
-				}, 500)
+				}, 100)
 			},
 
 			animate: function() {
@@ -156,7 +156,7 @@
 			}
 		};
 
-		let scrollHandler = throttle(onScrollHandler.scroll, 25, onScrollHandler);
+		let scrollHandler = throttle(onScrollHandler.scroll, 10, onScrollHandler);
 		window.onscroll = () => scrollHandler();
 
 		function throttle(fn, delay, ctx) {
